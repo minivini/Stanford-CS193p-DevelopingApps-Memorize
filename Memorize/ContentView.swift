@@ -17,7 +17,7 @@ struct ContentView: View {
             HStack {
                 ScrollView {
                     LazyVGrid(
-                        columns: [GridItem(), GridItem(), GridItem()],
+                        columns: [GridItem(.adaptive(minimum: 65))],
                         content: {
                             ForEach(emojis[0..<emojiCount], id: \.self, content: { emoji in
                                 CardView(content: emoji)
